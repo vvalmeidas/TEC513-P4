@@ -51,9 +51,10 @@
 #include "..\h\G711.h"
 #include "..\h\ADCChannelDrv.h"
 #include <stdio.h>
+#include <math.h>
 
 #define SIZE 10
-#define SIZE_FILTER 1
+#define SIZE_FILTER 44
 _FGS(GWRP_OFF & GCP_OFF);
 _FOSCSEL(FNOSC_FRC);
 _FOSC(FCKSM_CSECMD & OSCIOFNC_ON & POSCMD_NONE);
@@ -72,7 +73,7 @@ _FWDT(FWDTEN_OFF);
 
 
 //headers
-void convolution(int signal[], int kernel[], int result[], int size_signal, int size_kernel, int size_result);
+void convolution(int signal[], int kernel[], float result[], int size_signal, int size_kernel, int size_result);
 
 /* Allocate memory for buffers and drivers	*/
 
@@ -176,10 +177,14 @@ int main(void)
 	/* Main processing loop. Executed for every input and 
 	 * output frame	*/
     //int kernel[] = {1};
-    int kernel[SIZE_FILTER] = {42, 80, 106, 112, 91, 43, -27, -107, -180, -226, -227, -170, -51, 127, 347, 587, 817, 1008, 1134, 1178, 1134, 1008, 817, 587, 347, 127, -51, -170, -227, -226, -180, -107, -27, 43, 91, 112, 106, 80, 42};
-    //int signal[] = {42, 80, 106, 112, 91, 43};
-    int result[FRAME_SIZE + SIZE_FILTER - 1];
-    
+    float kernel[SIZE_FILTER] = {0.0260089671855094, -0.00283661216918882, -0.0115087163411002, -0.0235406970052995, -0.0356584358926075, -0.0442641700479179, -0.0469018131634581, -0.0432643300136655, -0.0354772146876289, -0.0276944554524758, -0.0245006714156357, -0.0289610721637429, -0.0410682341139295, -0.0570087340865727, -0.0698139320700921, -0.0713553141769536, -0.0550740941298067, -0.0185506411723116, 0.0349252502126112, 0.0965926966503804, 0.154163116606530, 0.195035526088132, 0.209811555619217, 0.195035526088132, 0.154163116606530, 0.0965926966503804, 0.0349252502126112, -0.0185506411723116, -0.0550740941298067, -0.0713553141769536, -0.0698139320700921, -0.0570087340865727, -0.0410682341139295, -0.0289610721637429, -0.0245006714156357, -0.0276944554524758, -0.0354772146876289, -0.0432643300136655, -0.0469018131634581, -0.0442641700479179, -0.0356584358926075, -0.0235406970052995, -0.0115087163411002, -0.00283661216918882, 0.0260089671855094};    
+    float result[FRAME_SIZE + SIZE_FILTER - 1];
+    int kernelRounded[SIZE_FILTER];
+    for (int i = 0; i < SIZE_FILTER; i++) {
+        kernelRounded[i] = 0;
+        kernelRounded[i] =  round(kernel[i]*65536); // Multiplica por 2^16 (65536)
+    }
+
 	while(1)
 	{
 			/* Obtaing the ADC samples	*/
@@ -187,7 +192,7 @@ int main(void)
                 ADCChannelRead(pADCChannelHandle,samples,FRAME_SIZE);           
                         
             while(OCPWMIsBusy(pOCPWMHandle));
-                convolution(samples, kernel, result, FRAME_SIZE, SIZE_FILTER, FRAME_SIZE + SIZE_FILTER - 1);
+                convolution(samples, kernelRounded, result, FRAME_SIZE, SIZE_FILTER, FRAME_SIZE + SIZE_FILTER - 1);
 
 		
 			/* Write the frame to the output	*/
@@ -200,7 +205,7 @@ int main(void)
 	}
 }
 
-void convolution(int signal[], int kernel[], int result[], int size_signal, int size_kernel, int size_result) {
+void convolution(int signal[], int kernel[], float result[], int size_signal, int size_kernel, int size_result) {
     int i, j;
       
     for (i = 0; i < size_result; i++) {
@@ -212,7 +217,7 @@ void convolution(int signal[], int kernel[], int result[], int size_signal, int 
         }
     }
     
-   // for (i = 0; i < size_result; i++){
-     //   result[i] = result[i] >> 1;
-    //}
+    for (i = 0; i < size_result; i++){
+        result[i] = result[i] / 65536;
+    }
 }
