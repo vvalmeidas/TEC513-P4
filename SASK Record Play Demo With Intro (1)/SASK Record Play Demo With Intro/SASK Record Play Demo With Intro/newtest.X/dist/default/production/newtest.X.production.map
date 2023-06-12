@@ -118,11 +118,11 @@ Default Scalar Model: Small
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200               0x6d4           0xa3e  (2622)
-.const                       0x8d4               0x20c           0x312  (786)
-.text                        0xae0               0xfea          0x17df  (6111)
-.dinit                      0x1aca                0x56            0x81  (129)
+.const                       0x8d4               0x178           0x234  (564)
+.text                        0xa4c              0x102e          0x1845  (6213)
+.dinit                      0x1a7a                0x56            0x81  (129)
 
-                 Total "program" memory used (bytes):         0x25b0  (9648) 3%
+                 Total "program" memory used (bytes):         0x2538  (9528) 3%
 
 
 "data" Memory  [Origin = 0x800, Length = 0x4000]
@@ -134,8 +134,8 @@ section                    address      alignment gaps    total length  (dec)
 .nbss                        0x822                   0             0xe  (14)
 .ndata                       0x830                   0             0x2  (2)
 .bss                         0x832                   0           0x420  (1056)
-_000000000400B64064876418    0x4400                   0           0x200  (512)
-_000000000400B5A064876418    0x4600                   0           0x200  (512)
+_0000000003F7A6406487746d    0x4400                   0           0x200  (512)
+_0000000003F7A5A06487746d    0x4600                   0           0x200  (512)
 
                  Total "data" memory used (bytes):          0x852  (2130) 13%
 
@@ -228,87 +228,87 @@ External Symbols in Program Memory (by address):
                   0x00080a                  ___floatdisf
                   0x00082a                  ___floatundisf
                   0x000888                  __fpack
-                  0x000ae0                  _AT25F4096Init
-                  0x000b22                  _AT25F4096Start
-                  0x000b48                  _AT25F4096Write
-                  0x000c3e                  _AT25F4096Read
-                  0x000d48                  _AT25F4096IsBusy
-                  0x000dac                  _AT25F4096IoCtl
-                  0x000fb8                  _ATSFMISRoutine
-                  0x00106c                  _SST25VF040B_open
-                  0x0010a0                  _SST25VF040B_write
-                  0x0010e2                  _SST25VF040B_read
-                  0x00113e                  _SST25VF040B_ioctl
-                  0x0012d6                  _SSTSFMISRoutine
-                  0x001350                  __T4Interrupt
-                  0x00139e                  _SFMInit
-                  0x00144a                  _SFMChipErase
-                  0x001480                  _SFMBlockErase
-                  0x0014b2                  _SFMWrite
-                  0x00152e                  _SFMRead
-                  0x001592                  _main
-                  0x001658                  _convolution
-                  0x0016fa                  _OCPWMInit
-                  0x00173a                  _OCPWMStart
-                  0x001778                  _OCPWMStop
-                  0x001786                  _OCPWMWrite
-                  0x001826                  _OCPWMIsBusy
-                  0x001832                  _G711Lin2Ulaw
-                  0x00187a                  _G711Ulaw2Lin
-                  0x0018b0                  _G711Lin2Alaw
-                  0x001902                  _G711Alaw2Lin
-                  0x001940                  _ADCChannelInit
-                  0x0019ba                  _ADCChannelStart
-                  0x0019d8                  _ADCChannelStop
-                  0x0019e8                  _ADCChannelRead
-                  0x001a42                  _ADCChannelIsBusy
-                  0x001a4e                  _SASKInit
-                  0x001a76                  _CheckSwitchS1
-                  0x001aa0                  _CheckSwitchS2
+                  0x000a4c                  _AT25F4096Init
+                  0x000a8e                  _AT25F4096Start
+                  0x000ab4                  _AT25F4096Write
+                  0x000baa                  _AT25F4096Read
+                  0x000cb4                  _AT25F4096IsBusy
+                  0x000d18                  _AT25F4096IoCtl
+                  0x000f24                  _ATSFMISRoutine
+                  0x000fd8                  _SST25VF040B_open
+                  0x00100c                  _SST25VF040B_write
+                  0x00104e                  _SST25VF040B_read
+                  0x0010aa                  _SST25VF040B_ioctl
+                  0x001242                  _SSTSFMISRoutine
+                  0x0012bc                  __T4Interrupt
+                  0x00130a                  _SFMInit
+                  0x0013b6                  _SFMChipErase
+                  0x0013ec                  _SFMBlockErase
+                  0x00141e                  _SFMWrite
+                  0x00149a                  _SFMRead
+                  0x0014fe                  _main
+                  0x0015c4                  _convolution
+                  0x0016aa                  _OCPWMInit
+                  0x0016ea                  _OCPWMStart
+                  0x001728                  _OCPWMStop
+                  0x001736                  _OCPWMWrite
+                  0x0017d6                  _OCPWMIsBusy
+                  0x0017e2                  _G711Lin2Ulaw
+                  0x00182a                  _G711Ulaw2Lin
+                  0x001860                  _G711Lin2Alaw
+                  0x0018b2                  _G711Alaw2Lin
+                  0x0018f0                  _ADCChannelInit
+                  0x00196a                  _ADCChannelStart
+                  0x001988                  _ADCChannelStop
+                  0x001998                  _ADCChannelRead
+                  0x0019f2                  _ADCChannelIsBusy
+                  0x0019fe                  _SASKInit
+                  0x001a26                  _CheckSwitchS1
+                  0x001a50                  _CheckSwitchS2
                   0xf80004                  __FGS.sec
 
 External Symbols in Program Memory (by name):
 
-                  0x001940                  _ADCChannelInit
-                  0x001a42                  _ADCChannelIsBusy
-                  0x0019e8                  _ADCChannelRead
-                  0x0019ba                  _ADCChannelStart
-                  0x0019d8                  _ADCChannelStop
-                  0x000ae0                  _AT25F4096Init
-                  0x000dac                  _AT25F4096IoCtl
-                  0x000d48                  _AT25F4096IsBusy
-                  0x000c3e                  _AT25F4096Read
-                  0x000b22                  _AT25F4096Start
-                  0x000b48                  _AT25F4096Write
-                  0x000fb8                  _ATSFMISRoutine
-                  0x001a76                  _CheckSwitchS1
-                  0x001aa0                  _CheckSwitchS2
-                  0x001902                  _G711Alaw2Lin
-                  0x0018b0                  _G711Lin2Alaw
-                  0x001832                  _G711Lin2Ulaw
-                  0x00187a                  _G711Ulaw2Lin
-                  0x0016fa                  _OCPWMInit
-                  0x001826                  _OCPWMIsBusy
-                  0x00173a                  _OCPWMStart
-                  0x001778                  _OCPWMStop
-                  0x001786                  _OCPWMWrite
-                  0x001a4e                  _SASKInit
-                  0x001480                  _SFMBlockErase
-                  0x00144a                  _SFMChipErase
-                  0x00139e                  _SFMInit
-                  0x00152e                  _SFMRead
-                  0x0014b2                  _SFMWrite
-                  0x00113e                  _SST25VF040B_ioctl
-                  0x00106c                  _SST25VF040B_open
-                  0x0010e2                  _SST25VF040B_read
-                  0x0010a0                  _SST25VF040B_write
-                  0x0012d6                  _SSTSFMISRoutine
+                  0x0018f0                  _ADCChannelInit
+                  0x0019f2                  _ADCChannelIsBusy
+                  0x001998                  _ADCChannelRead
+                  0x00196a                  _ADCChannelStart
+                  0x001988                  _ADCChannelStop
+                  0x000a4c                  _AT25F4096Init
+                  0x000d18                  _AT25F4096IoCtl
+                  0x000cb4                  _AT25F4096IsBusy
+                  0x000baa                  _AT25F4096Read
+                  0x000a8e                  _AT25F4096Start
+                  0x000ab4                  _AT25F4096Write
+                  0x000f24                  _ATSFMISRoutine
+                  0x001a26                  _CheckSwitchS1
+                  0x001a50                  _CheckSwitchS2
+                  0x0018b2                  _G711Alaw2Lin
+                  0x001860                  _G711Lin2Alaw
+                  0x0017e2                  _G711Lin2Ulaw
+                  0x00182a                  _G711Ulaw2Lin
+                  0x0016aa                  _OCPWMInit
+                  0x0017d6                  _OCPWMIsBusy
+                  0x0016ea                  _OCPWMStart
+                  0x001728                  _OCPWMStop
+                  0x001736                  _OCPWMWrite
+                  0x0019fe                  _SASKInit
+                  0x0013ec                  _SFMBlockErase
+                  0x0013b6                  _SFMChipErase
+                  0x00130a                  _SFMInit
+                  0x00149a                  _SFMRead
+                  0x00141e                  _SFMWrite
+                  0x0010aa                  _SST25VF040B_ioctl
+                  0x000fd8                  _SST25VF040B_open
+                  0x00104e                  _SST25VF040B_read
+                  0x00100c                  _SST25VF040B_write
+                  0x001242                  _SSTSFMISRoutine
                   0x0002c8                  __DMA0Interrupt
                   0x0002e4                  __DMA1Interrupt
                   0x000374                  __DefaultInterrupt
                   0xf80004                  __FGS.sec
                   0x00034e                  __SPI1Interrupt
-                  0x001350                  __T4Interrupt
+                  0x0012bc                  __T4Interrupt
                   0x00043c                  ___addsf3
                   0x00043c                  ___addsf3x
                   0x00037a                  ___divsi3
@@ -331,8 +331,8 @@ External Symbols in Program Memory (by name):
                   0x000200                  __resetPRI
                   0x0007c4                  __typef
                   0x000766                  __unpackdnrmf
-                  0x001658                  _convolution
-                  0x001592                  _main
+                  0x0015c4                  _convolution
+                  0x0014fe                  _main
 
 Memory Configuration
 
@@ -473,7 +473,7 @@ __FSS
 
 __FGS             0xf80004          0x2
  *(__FGS.sec*)
- __FGS.sec        0xf80004          0x2 /CW/_FGSpöi
+ __FGS.sec        0xf80004          0x2 /CW/_FGSpöx
                   0xf80004                  __FGS.sec
 
 __FOSCSEL         0xf80006          0x2
@@ -509,81 +509,81 @@ __FUID3
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x59bd
+.debug_info       0x000000       0x59e8
  *(.debug_info)
  .debug_info      0x000000        0x101 build/default/production/_ext/1360937237/G711.o
  .debug_info      0x000101        0xf60 build/default/production/_ext/1360937237/ADCChannelDrv.o
  .debug_info      0x001061       0x1030 build/default/production/_ext/1360937237/AT25F4096Drv.o
- .debug_info      0x002091        0xad1 build/default/production/_ext/1360937237/main.o
- .debug_info      0x002b62        0xb11 build/default/production/_ext/1360937237/OCPWMDrv.o
- .debug_info      0x003673        0xdd2 build/default/production/_ext/1360937237/sask.o
- .debug_info      0x004445        0xc49 build/default/production/_ext/1360937237/SFMDrv.o
- .debug_info      0x00508e        0x10b build/default/production/_ext/1360937237/SST25VF040BDrv.o
- .debug_info      0x005199         0x8c d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(divsi3.XX_o)
- .debug_info      0x005225         0x8d d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fixsfsi.XX_o)
- .debug_info      0x0052b2         0x8f d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatsisf.XX_o)
- .debug_info      0x005341         0x8d d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack.XX_o)
- .debug_info      0x0053ce         0x8d d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(udivsi3.XX_o)
- .debug_info      0x00545b         0x9d d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(addsf3x.XX_o)
- .debug_info      0x0054f8         0x9d d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsf3x.XX_o)
- .debug_info      0x005595         0xa0 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dnrmpackfx.XX_o)
- .debug_info      0x005635         0xa2 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(unpackdnrmfx.XX_o)
- .debug_info      0x0056d7         0x9c d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(typefx.XX_o)
- .debug_info      0x005773         0x9f d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(propnanfx.XX_o)
- .debug_info      0x005812         0x8f d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatdisf.XX_o)
- .debug_info      0x0058a1         0x91 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatundisf.XX_o)
- .debug_info      0x005932         0x8b d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fpack.XX_o)
+ .debug_info      0x002091        0xafc build/default/production/_ext/1360937237/main.o
+ .debug_info      0x002b8d        0xb11 build/default/production/_ext/1360937237/OCPWMDrv.o
+ .debug_info      0x00369e        0xdd2 build/default/production/_ext/1360937237/sask.o
+ .debug_info      0x004470        0xc49 build/default/production/_ext/1360937237/SFMDrv.o
+ .debug_info      0x0050b9        0x10b build/default/production/_ext/1360937237/SST25VF040BDrv.o
+ .debug_info      0x0051c4         0x8c d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(divsi3.XX_o)
+ .debug_info      0x005250         0x8d d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fixsfsi.XX_o)
+ .debug_info      0x0052dd         0x8f d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatsisf.XX_o)
+ .debug_info      0x00536c         0x8d d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack.XX_o)
+ .debug_info      0x0053f9         0x8d d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(udivsi3.XX_o)
+ .debug_info      0x005486         0x9d d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(addsf3x.XX_o)
+ .debug_info      0x005523         0x9d d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsf3x.XX_o)
+ .debug_info      0x0055c0         0xa0 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dnrmpackfx.XX_o)
+ .debug_info      0x005660         0xa2 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(unpackdnrmfx.XX_o)
+ .debug_info      0x005702         0x9c d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(typefx.XX_o)
+ .debug_info      0x00579e         0x9f d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(propnanfx.XX_o)
+ .debug_info      0x00583d         0x8f d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatdisf.XX_o)
+ .debug_info      0x0058cc         0x91 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatundisf.XX_o)
+ .debug_info      0x00595d         0x8b d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fpack.XX_o)
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000        0x94b
+.debug_abbrev     0x000000        0x954
  *(.debug_abbrev)
  .debug_abbrev    0x000000         0x14 build/default/production/_ext/1360937237/G711.o
  .debug_abbrev    0x000014        0x150 build/default/production/_ext/1360937237/ADCChannelDrv.o
  .debug_abbrev    0x000164        0x195 build/default/production/_ext/1360937237/AT25F4096Drv.o
- .debug_abbrev    0x0002f9        0x1b3 build/default/production/_ext/1360937237/main.o
- .debug_abbrev    0x0004ac        0x150 build/default/production/_ext/1360937237/OCPWMDrv.o
- .debug_abbrev    0x0005fc         0xe3 build/default/production/_ext/1360937237/sask.o
- .debug_abbrev    0x0006df        0x140 build/default/production/_ext/1360937237/SFMDrv.o
- .debug_abbrev    0x00081f         0x14 build/default/production/_ext/1360937237/SST25VF040BDrv.o
- .debug_abbrev    0x000833         0x14 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(divsi3.XX_o)
- .debug_abbrev    0x000847         0x14 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fixsfsi.XX_o)
- .debug_abbrev    0x00085b         0x14 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatsisf.XX_o)
- .debug_abbrev    0x00086f         0x14 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack.XX_o)
- .debug_abbrev    0x000883         0x14 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(udivsi3.XX_o)
- .debug_abbrev    0x000897         0x14 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(addsf3x.XX_o)
- .debug_abbrev    0x0008ab         0x14 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsf3x.XX_o)
- .debug_abbrev    0x0008bf         0x14 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dnrmpackfx.XX_o)
- .debug_abbrev    0x0008d3         0x14 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(unpackdnrmfx.XX_o)
- .debug_abbrev    0x0008e7         0x14 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(typefx.XX_o)
- .debug_abbrev    0x0008fb         0x14 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(propnanfx.XX_o)
- .debug_abbrev    0x00090f         0x14 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatdisf.XX_o)
- .debug_abbrev    0x000923         0x14 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatundisf.XX_o)
- .debug_abbrev    0x000937         0x14 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fpack.XX_o)
+ .debug_abbrev    0x0002f9        0x1bc build/default/production/_ext/1360937237/main.o
+ .debug_abbrev    0x0004b5        0x150 build/default/production/_ext/1360937237/OCPWMDrv.o
+ .debug_abbrev    0x000605         0xe3 build/default/production/_ext/1360937237/sask.o
+ .debug_abbrev    0x0006e8        0x140 build/default/production/_ext/1360937237/SFMDrv.o
+ .debug_abbrev    0x000828         0x14 build/default/production/_ext/1360937237/SST25VF040BDrv.o
+ .debug_abbrev    0x00083c         0x14 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(divsi3.XX_o)
+ .debug_abbrev    0x000850         0x14 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fixsfsi.XX_o)
+ .debug_abbrev    0x000864         0x14 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatsisf.XX_o)
+ .debug_abbrev    0x000878         0x14 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack.XX_o)
+ .debug_abbrev    0x00088c         0x14 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(udivsi3.XX_o)
+ .debug_abbrev    0x0008a0         0x14 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(addsf3x.XX_o)
+ .debug_abbrev    0x0008b4         0x14 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsf3x.XX_o)
+ .debug_abbrev    0x0008c8         0x14 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dnrmpackfx.XX_o)
+ .debug_abbrev    0x0008dc         0x14 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(unpackdnrmfx.XX_o)
+ .debug_abbrev    0x0008f0         0x14 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(typefx.XX_o)
+ .debug_abbrev    0x000904         0x14 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(propnanfx.XX_o)
+ .debug_abbrev    0x000918         0x14 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatdisf.XX_o)
+ .debug_abbrev    0x00092c         0x14 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatundisf.XX_o)
+ .debug_abbrev    0x000940         0x14 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fpack.XX_o)
 
-.debug_line       0x000000       0x1141
+.debug_line       0x000000       0x114f
  *(.debug_line)
  .debug_line      0x000000         0xc1 build/default/production/_ext/1360937237/G711.o
  .debug_line      0x0000c1        0x165 build/default/production/_ext/1360937237/ADCChannelDrv.o
  .debug_line      0x000226        0x1d5 build/default/production/_ext/1360937237/AT25F4096Drv.o
- .debug_line      0x0003fb        0x14c build/default/production/_ext/1360937237/main.o
- .debug_line      0x000547        0x16a build/default/production/_ext/1360937237/OCPWMDrv.o
- .debug_line      0x0006b1        0x115 build/default/production/_ext/1360937237/sask.o
- .debug_line      0x0007c6        0x19c build/default/production/_ext/1360937237/SFMDrv.o
- .debug_line      0x000962        0x1d3 build/default/production/_ext/1360937237/SST25VF040BDrv.o
- .debug_line      0x000b35         0x43 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(divsi3.XX_o)
- .debug_line      0x000b78         0x56 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fixsfsi.XX_o)
- .debug_line      0x000bce         0x3a d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatsisf.XX_o)
- .debug_line      0x000c08         0x4a d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack.XX_o)
- .debug_line      0x000c52         0x45 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(udivsi3.XX_o)
- .debug_line      0x000c97        0x136 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(addsf3x.XX_o)
- .debug_line      0x000dcd         0xcc d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsf3x.XX_o)
- .debug_line      0x000e99         0x72 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dnrmpackfx.XX_o)
- .debug_line      0x000f0b         0x7a d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(unpackdnrmfx.XX_o)
- .debug_line      0x000f85         0x5e d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(typefx.XX_o)
- .debug_line      0x000fe3         0x51 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(propnanfx.XX_o)
- .debug_line      0x001034         0x47 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatdisf.XX_o)
- .debug_line      0x00107b         0x6c d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatundisf.XX_o)
- .debug_line      0x0010e7         0x5a d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fpack.XX_o)
+ .debug_line      0x0003fb        0x15a build/default/production/_ext/1360937237/main.o
+ .debug_line      0x000555        0x16a build/default/production/_ext/1360937237/OCPWMDrv.o
+ .debug_line      0x0006bf        0x115 build/default/production/_ext/1360937237/sask.o
+ .debug_line      0x0007d4        0x19c build/default/production/_ext/1360937237/SFMDrv.o
+ .debug_line      0x000970        0x1d3 build/default/production/_ext/1360937237/SST25VF040BDrv.o
+ .debug_line      0x000b43         0x43 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(divsi3.XX_o)
+ .debug_line      0x000b86         0x56 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fixsfsi.XX_o)
+ .debug_line      0x000bdc         0x3a d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatsisf.XX_o)
+ .debug_line      0x000c16         0x4a d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(funpack.XX_o)
+ .debug_line      0x000c60         0x45 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(udivsi3.XX_o)
+ .debug_line      0x000ca5        0x136 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(addsf3x.XX_o)
+ .debug_line      0x000ddb         0xcc d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(mulsf3x.XX_o)
+ .debug_line      0x000ea7         0x72 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(dnrmpackfx.XX_o)
+ .debug_line      0x000f19         0x7a d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(unpackdnrmfx.XX_o)
+ .debug_line      0x000f93         0x5e d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(typefx.XX_o)
+ .debug_line      0x000ff1         0x51 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(propnanfx.XX_o)
+ .debug_line      0x001042         0x47 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatdisf.XX_o)
+ .debug_line      0x001089         0x6c d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(floatundisf.XX_o)
+ .debug_line      0x0010f5         0x5a d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fpack.XX_o)
 
 .debug_frame      0x000000        0x3de
  *(.debug_frame)
@@ -1649,7 +1649,7 @@ LOAD d:/microchip/xc16/v2.10/bin/bin/../../lib\libm-elf.a
 LOAD d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-elf.a
 END GROUP
 OUTPUT(dist/default/production/newtest.X.production.elf elf32-pic30)
-LOAD /CW/_FGSpöi
+LOAD /CW/_FGSpöx
 LOAD default_isr
 LOAD data_init
 
@@ -1703,15 +1703,15 @@ __c30_signature
  __c30_signature
                   0x000927          0x6 d:/microchip/xc16/v2.10/bin/bin/../../lib\libc99-pic30-elf.a(fpack.XX_o)
 
-_000000000400B5A064876418
+_0000000003F7A5A06487746d
                     0x4600        0x200
- _000000000400B5A064876418
+ _0000000003F7A5A06487746d
                     0x4600        0x200 build/default/production/_ext/1360937237/main.o
                     0x4600                  _adcBuffer
 
-_000000000400B64064876418
+_0000000003F7A6406487746d
                     0x4400        0x200
- _000000000400B64064876418
+ _0000000003F7A6406487746d
                     0x4400        0x200 build/default/production/_ext/1360937237/main.o
                     0x4400                  _ocPWMBuffer
 
@@ -1775,55 +1775,55 @@ _000000000400B64064876418
  .ivt._T4Interrupt
                   0x00004a          0x2 build/default/production/_ext/1360937237/SST25VF040BDrv.o
 
-.const              0x88d4        0x20c load address 0x0008d4  
- .const             0x88d4        0x20c build/default/production/_ext/1360937237/main.o
+.const              0x88d4        0x178 load address 0x0008d4  
+ .const             0x88d4        0x178 build/default/production/_ext/1360937237/main.o
 
-.text             0x000ae0        0xfea
- .text            0x000ae0        0x58c build/default/production/_ext/1360937237/AT25F4096Drv.o
-                  0x000ae0                  _AT25F4096Init
-                  0x000b22                  _AT25F4096Start
-                  0x000b48                  _AT25F4096Write
-                  0x000c3e                  _AT25F4096Read
-                  0x000d48                  _AT25F4096IsBusy
-                  0x000dac                  _AT25F4096IoCtl
-                  0x000fb8                  _ATSFMISRoutine
- .text            0x00106c        0x332 build/default/production/_ext/1360937237/SST25VF040BDrv.o
-                  0x00106c                  _SST25VF040B_open
-                  0x0010a0                  _SST25VF040B_write
-                  0x0010e2                  _SST25VF040B_read
-                  0x00113e                  _SST25VF040B_ioctl
-                  0x0012d6                  _SSTSFMISRoutine
-                  0x001350                  __T4Interrupt
- .text            0x00139e        0x1f4 build/default/production/_ext/1360937237/SFMDrv.o
-                  0x00139e                  _SFMInit
-                  0x00144a                  _SFMChipErase
-                  0x001480                  _SFMBlockErase
-                  0x0014b2                  _SFMWrite
-                  0x00152e                  _SFMRead
- .text            0x001592        0x168 build/default/production/_ext/1360937237/main.o
-                  0x001592                  _main
-                  0x001658                  _convolution
- .text            0x0016fa        0x138 build/default/production/_ext/1360937237/OCPWMDrv.o
-                  0x0016fa                  _OCPWMInit
-                  0x00173a                  _OCPWMStart
-                  0x001778                  _OCPWMStop
-                  0x001786                  _OCPWMWrite
-                  0x001826                  _OCPWMIsBusy
- .text            0x001832        0x10e build/default/production/_ext/1360937237/G711.o
-                  0x001832                  _G711Lin2Ulaw
-                  0x00187a                  _G711Ulaw2Lin
-                  0x0018b0                  _G711Lin2Alaw
-                  0x001902                  _G711Alaw2Lin
- .text            0x001940        0x10e build/default/production/_ext/1360937237/ADCChannelDrv.o
-                  0x001940                  _ADCChannelInit
-                  0x0019ba                  _ADCChannelStart
-                  0x0019d8                  _ADCChannelStop
-                  0x0019e8                  _ADCChannelRead
-                  0x001a42                  _ADCChannelIsBusy
- .text            0x001a4e         0x7c build/default/production/_ext/1360937237/sask.o
-                  0x001a4e                  _SASKInit
-                  0x001a76                  _CheckSwitchS1
-                  0x001aa0                  _CheckSwitchS2
+.text             0x000a4c       0x102e
+ .text            0x000a4c        0x58c build/default/production/_ext/1360937237/AT25F4096Drv.o
+                  0x000a4c                  _AT25F4096Init
+                  0x000a8e                  _AT25F4096Start
+                  0x000ab4                  _AT25F4096Write
+                  0x000baa                  _AT25F4096Read
+                  0x000cb4                  _AT25F4096IsBusy
+                  0x000d18                  _AT25F4096IoCtl
+                  0x000f24                  _ATSFMISRoutine
+ .text            0x000fd8        0x332 build/default/production/_ext/1360937237/SST25VF040BDrv.o
+                  0x000fd8                  _SST25VF040B_open
+                  0x00100c                  _SST25VF040B_write
+                  0x00104e                  _SST25VF040B_read
+                  0x0010aa                  _SST25VF040B_ioctl
+                  0x001242                  _SSTSFMISRoutine
+                  0x0012bc                  __T4Interrupt
+ .text            0x00130a        0x1f4 build/default/production/_ext/1360937237/SFMDrv.o
+                  0x00130a                  _SFMInit
+                  0x0013b6                  _SFMChipErase
+                  0x0013ec                  _SFMBlockErase
+                  0x00141e                  _SFMWrite
+                  0x00149a                  _SFMRead
+ .text            0x0014fe        0x1ac build/default/production/_ext/1360937237/main.o
+                  0x0014fe                  _main
+                  0x0015c4                  _convolution
+ .text            0x0016aa        0x138 build/default/production/_ext/1360937237/OCPWMDrv.o
+                  0x0016aa                  _OCPWMInit
+                  0x0016ea                  _OCPWMStart
+                  0x001728                  _OCPWMStop
+                  0x001736                  _OCPWMWrite
+                  0x0017d6                  _OCPWMIsBusy
+ .text            0x0017e2        0x10e build/default/production/_ext/1360937237/G711.o
+                  0x0017e2                  _G711Lin2Ulaw
+                  0x00182a                  _G711Ulaw2Lin
+                  0x001860                  _G711Lin2Alaw
+                  0x0018b2                  _G711Alaw2Lin
+ .text            0x0018f0        0x10e build/default/production/_ext/1360937237/ADCChannelDrv.o
+                  0x0018f0                  _ADCChannelInit
+                  0x00196a                  _ADCChannelStart
+                  0x001988                  _ADCChannelStop
+                  0x001998                  _ADCChannelRead
+                  0x0019f2                  _ADCChannelIsBusy
+ .text            0x0019fe         0x7c build/default/production/_ext/1360937237/sask.o
+                  0x0019fe                  _SASKInit
+                  0x001a26                  _CheckSwitchS1
+                  0x001a50                  _CheckSwitchS2
 
-.dinit            0x001aca         0x56
- .dinit           0x001aca         0x56 data_init
+.dinit            0x001a7a         0x56
+ .dinit           0x001a7a         0x56 data_init
